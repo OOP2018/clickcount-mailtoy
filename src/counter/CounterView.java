@@ -61,6 +61,11 @@ public class CounterView extends Stage implements java.util.Observer {
 		this.sizeToScene();
 	}
 	
+	public void start(){
+		CounterView view = new CounterView(counter);
+		counter.addObserver(view);
+		view.run();
+	}
 	/** Show the window and update the counter value. */
 	public void run() {
 		stage.show();
