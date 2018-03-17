@@ -5,6 +5,8 @@ import java.util.Observer;
 
 /**
  * Print the counter value on the console whenever it changes.
+ * 
+ * @author Kanchanok Kannee
  */
 public class ConsoleView implements Observer {
 	private Counter counter;
@@ -12,7 +14,8 @@ public class ConsoleView implements Observer {
 	/**
 	 * A ConsoleView with reference to a counter (the subject).
 	 * 
-	 * @param counter the counter to display.
+	 * @param counter
+	 *            the counter to display.
 	 */
 	public ConsoleView(Counter counter) {
 		this.counter = counter;
@@ -20,10 +23,8 @@ public class ConsoleView implements Observer {
 
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-//		if (arg == null) System.out.println(arg);
-		System.out.println("Count: "+ counter.getCount());	
+		// if (arg == null) System.out.println(arg);
+		System.out.println("Count: " + counter.getCount());
 	}
 
-	
 }

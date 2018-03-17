@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * Test the Observer-Observable behavior for Counter object.
+ * 
  * @author Kanchanok Kannee
  *
  */
@@ -12,17 +13,12 @@ public class ObserverTest {
 		Scanner console = new Scanner(System.in);
 		// 1. create the subject (Observable)
 		Counter counter = new Counter();
-		// 2. Create the observer with reference the subject  
+		// 2. Create the observer with reference the subject
 		ConsoleView view = new ConsoleView(counter);
 		// 3. add observer to subject
 		counter.addObserver(view);
-		
-		// Create another observer
-//		CounterView view2 = new CounterView(counter);
-//		view2.run();
-		
 		// 4. run the app
-		while(true){
+		while (true) {
 			System.out.println("How much?");
 			int howmuch = console.nextInt();
 			counter.add(howmuch);

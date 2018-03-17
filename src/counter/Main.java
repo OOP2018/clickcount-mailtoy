@@ -57,19 +57,19 @@ public class Main extends Application {
 		// Dependency Injection: 
 		// We set a reference to the counter using the constructor.
 		
-		//TODO Create a ConsoleView with dependency injection.
+		// Create a ConsoleView with dependency injection.
 		ConsoleView view = new ConsoleView(counter);
-		//TODO Add ConsoleView as an observer of Counter
+		// Add ConsoleView as an observer of Counter
 		counter.addObserver(view);
 		
 		// Create another window that references the SAME counter. 
 		
-		//TODO: Complete the CounterView class.
+		// Complete the CounterView class.
 		CounterView view2 = new CounterView(counter);
 		counter.addObserver(view2);
 		
-		//TODO Add CounterView as observer.
-		//TODO Show CounterView by calling its run() method
+		// Add CounterView as observer.
+		// Show CounterView by calling its run() method
 		view2.run();
 	}
 	
